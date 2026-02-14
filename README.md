@@ -1,3 +1,5 @@
 # Obsidian Theme Cheat Sheet
 
 A Cheat Sheet For Obsidian Theme-Building. Easy to read and follow. Be sure to check out [Obsidian's online documentation](https://docs.obsidian.md/Themes/App+themes/Submit+your+theme) for further explanations.
+
+I built this while working on my other themes and testing out various settings. I figured others may also find it useful. 😄
