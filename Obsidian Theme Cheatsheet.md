@@ -95,6 +95,11 @@ GLOBAL RESETS & FOUNDATIONS
     --border-style-dashed: dashed;
     --border-style-dotted: dotted;
     
+    /* Border Toggle */
+    --border-toggle-enabled: 1px;  /* Default: borders ON */
+    --border-toggle-disabled: 0px; /* Borders OFF */
+    (will add this toggle in settings)
+    
     /* Border Radius */
     --radius-s: 4px;
     --radius-m: 8px;
@@ -454,6 +459,46 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 ```
 
 ---
+
+## Border Toggle
+
+Add this at the end of the file above Styles Settings:
+
+```
+/* Apply Border Toggle */
+body.toggle-borders-off * {
+    border-width: var(--border-toggle-disabled) !important;
+}
+
+/* Specific border elements to target */
+body.toggle-borders-off .modal,
+body.toggle-borders-off .prompt,
+body.toggle-borders-off .menu,
+body.toggle-borders-off .workspace-ribbon,
+body.toggle-borders-off .workspace-tabs,
+body.toggle-borders-off .status-bar,
+body.toggle-borders-off button,
+body.toggle-borders-off input,
+body.toggle-borders-off textarea,
+body.toggle-borders-off select,
+body.toggle-borders-off .dropdown,
+body.toggle-borders-off .nav-file-title,
+body.toggle-borders-off .nav-folder-title,
+body.toggle-borders-off .workspace-tab-header,
+body.toggle-borders-off table,
+body.toggle-borders-off th,
+body.toggle-borders-off td,
+body.toggle-borders-off blockquote,
+body.toggle-borders-off pre {
+    border-width: var(--border-toggle-disabled) !important;
+}
+
+/* Keep essential borders (scrollbars, etc.) */
+body.toggle-borders-off ::-webkit-scrollbar-thumb {
+    border: none !important;
+}
+
+```
 
 ## Workspace Areas
 
@@ -996,6 +1041,7 @@ settings:
       step: 1
 */
 ```
+
 
 ### Example From [Purple Mushroom Fantasy](https://github.com/breakthebull/pmf)
 
