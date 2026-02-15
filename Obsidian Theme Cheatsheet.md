@@ -194,7 +194,7 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 ### Modifiers
 
 ```
-	--background-modifier-border: #hex ~or~ var();
+	--background-modifier-border: #hex ~or~ var(); /*Border outline of quotes, tables, line breaks*/
 	--background-modifier-form-field: #hex ~or~ var();
 	--background-modifier-form-field-highlighted: #hex ~or~ var();
 	--background-modifier-hover: #hex ~or~ var();
@@ -334,6 +334,8 @@ em {
 
 ### Buttons
 
+*(this will override the interactives if you want the buttons separate from your chosen interactive color placements)*
+
 ```
 	--button-background: #hex ~or~ var();
 	--button-color: #hex ~or~ var();
@@ -383,6 +385,8 @@ button.mod-cta:hover {
 ```
 
 ### Links
+
+*(this will override the accent links if you need these to be separate from your accent chosen locations)*
 
 ```
 	--link-color: #hex ~or~ var();
