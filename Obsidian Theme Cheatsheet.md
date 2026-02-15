@@ -4,48 +4,30 @@
 
 ```
 /* ========================================
-
-OBSIDIAN THEME: Purple Mushroom Fantasy
-
-AUTHOR: DA Rasmussen
-
+OBSIDIAN THEME: Theme Name
+AUTHOR: Your Name
 LICENSE: CC0-1.0
-
-VERSION: 1.0.1
-
+VERSION: version #
 ======================================== */
-
 /* -
-
 GLOBAL RESETS & FOUNDATIONS
-
 - */
 
-  
-
 *,
-
 *::before,
-
 *::after {
-
-    box-sizing: border-box;
-
+    box-sizing: border-box;
 }
 
-  
-
 :root {
+    /* Font Stack */
+    --default-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-monospace: "Source Code Pro", "Fira Code", Consolas, monospace;
 
-   /* Font Stack */
-    --default-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --font-monospace: "Source Code Pro", "Fira Code", Consolas, monospace;
-
-   /* Typography from Style Settings */
-    --font-size-normal: 16px;
-    --font-size-code: 15px;
-    --line-height-normal: 1.5;
-
+    /* Typography from Style Settings */
+    --font-size-normal: 16px;
+    --font-size-code: 15px;
+    --line-height-normal: 1.5;
 }
 ```
 
