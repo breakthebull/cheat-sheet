@@ -2,6 +2,8 @@
 
 ## Beginning The Code - Basically
 
+(most examples are used by [Purple Mushroom Fantasy](https://github.com/breakthebull/pmf) and [Mocha Latte Cafe 002](https://github.com/breakthebull/cappuccino))
+
 ```
 /* ========================================
 OBSIDIAN THEME: Theme Name
@@ -157,6 +159,8 @@ GLOBAL RESETS & FOUNDATIONS
 
 ## Next, Light or Dark?
 
+*If I put this (!) that means it belongs OUTSIDE the '.theme {}' area*
+
 ```
 .theme-light {
 	(color designs for light theme will go in here)
@@ -206,6 +210,38 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 	--background-modifier-border-focus: #hex ~or~ var();
 ```
 
+#### (!) Embeds use modifiers--optional
+
+```
+/* Embeds */
+.markdown-embed, .file-embed {
+    border: 1px solid var(--background-modifier-border);
+    background-color: var(--background-primary-alt);
+}
+.markdown-embed-title, .file-embed-title {
+    border-bottom: 1px solid var(--background-modifier-border);
+    color: var(--text-active);
+}
+.markdown-embed-link, .file-embed-link {
+    color: var(--text-accent);
+}
+```
+
+#### (!) Form Elements (the search boxes)
+
+```
+/* Form Elements */
+input, textarea, .dropdown {
+    background-color: var(--background-modifier-form-field);
+    border-color: var(--background-modifier-border);
+    color: var(--text-normal);
+}
+input:focus, textarea:focus {
+    border-color: var(--background-modifier-border-focus);
+    box-shadow: 0 0 0 2px rgba(201, 140, 104, 0.28);
+}
+```
+
 ### Text
 
 ```
@@ -216,6 +252,27 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 	--text-on-accent: #hex ~or~ var();
 	--text-accent-hover: #hex ~or~ var();
 	--text-on-accent-hover: #hex ~or~ var();
+```
+
+#### (!) Typography Rules Example Code
+
+```
+/* Bold & Italic */
+strong {
+  color: var(--mushroom-highlight);
+  font-weight: 600;
+}
+
+em {
+  color: var(--mushroom-accent);
+  font-style: italic;
+}
+```
+
+### Dropdowns
+
+```
+--dropdown-background: #hex ~or~ var();
 ```
 
 ### Interactive
@@ -237,12 +294,47 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 	--tag-border-color: #hex ~or~ var();
 ```
 
+#### (!) Tags Example Code
+
+```
+/* Tags */
+.tag {
+  background: var(--tag-background);
+  color: var(--tag-color);
+ border: var(--tag-border-width, 1px) solid var(--tag-border-color);
+  border-radius: var(--tag-shape, 14px);
+  padding: 2px 8px;
+  font-size: 0.85em;
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  background: rgba(81, 64, 176, 0.3);
+  box-shadow: 0 0 8px rgba(81, 64, 176, 0.4);
+}
+```
+
 ### Metadata
 
 ```
 	--metadata-label-text-color: #hex ~or~ var();
 	--metadata-label-background: #hex ~or~ var();
 	--metadata-property-background: #hex ~or~ var();
+```
+
+#### (!) Frontmatter/Properties/Metadata Example Code (Used Theme Mocha Latte Cafe 002 snippet)
+
+```
+/* Frontmatter */
+.frontmatter-container,
+.cm-hmd-frontmatter {
+    background-color: var(--metadata-label-background);
+    border-bottom: 1px dashed var(--background-modifier-border);
+    color: var(--metadata-label-text-color);
+}
+.frontmatter-container .frontmatter-alias {
+    color: var(--espresso-base);
+}
 ```
 
 ### Buttons
@@ -252,6 +344,40 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 	--button-color: #hex ~or~ var();
 	--button-background-hover: #hex ~or~ var();
 	--button-color-hover: #hex ~or~ var();
+```
+
+#### (!) Buttons Example Codes
+
+```
+/* Buttons */
+button,
+.button {
+  background: var(--button-normal);
+  color: var(--text-normal);
+  border: 1px solid var(--mushroom-spore);
+  border-radius: var(--border-radius, 6px);
+  transition: all 0.2s ease;
+}
+
+button:hover,
+.button:hover {
+  background: var(--button-hover);
+  border-color: var(--mushroom-mid);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button.mod-cta,
+.button.mod-cta {
+  background: var(--mushroom-accent);
+  color: white;
+  border-color: var(--mushroom-accent);
+}
+
+button.mod-cta:hover {
+  background: var(--mushroom-glow);
+  border-color: var(--mushroom-glow);
+}
 ```
 
 ### Highlights
@@ -269,6 +395,46 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 	--backlink-border-color: #hex ~or~ var();
     --backlink-background: #hex ~or~ var();
     --backlink-title-color: #hex ~or~ var();
+```
+
+#### (!) Links Example Code
+
+```
+/* Links */
+a,
+.cm-hmd-internal-link,
+.cm-url,
+.external-link {
+  color: var(--text-accent);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.link-underline a,
+.link-underline .cm-hmd-internal-link,
+.link-underline .cm-url,
+.link-underline .external-link {
+  text-decoration: underline;
+}
+
+.link-underline-hover a:hover,
+.link-underline-hover .cm-hmd-internal-link:hover,
+.link-underline-hover .cm-url:hover,
+.link-underline-hover .external-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--text-accent);
+}
+
+a:hover,
+.cm-hmd-internal-link:hover {
+  color: var(--text-accent-hover);
+}
+
+a.is-unresolved,
+.cm-hmd-internal-link.is-unresolved {
+  opacity: var(--link-unresolved-opacity, 0.7);
+  color: var(--mushroom-poison);
+}
 ```
 
 ### Headings
@@ -289,6 +455,15 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 	--checkbox-color-hover: #hex ~or~ var();
 ```
 
+#### (!) Checkboxes Example Code
+
+```
+/* Checkboxes */
+input[type="checkbox"] {
+  accent-color: var(--mushroom-accent);
+}
+```
+
 ### Scrollbar
 
 ```
@@ -296,6 +471,26 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 	--scrollbar-active-thumb-bg: #hex ~or~ var();
 	--scrollbar-background: #hex ~or~ var();
 	--scrollbar-color: #hex ~or~ var();
+```
+
+#### (!) Cursor Blink Example Code -- optional
+
+```
+.cm-cursorLayer .cm-cursor {
+    border-left: 1.2px solid var(--espresso-base);
+    margin-left: -0.6px;
+}
+.cm-cursorLayer {
+    animation-name: none;
+}
+@keyframes phase-blink {
+    15% { opacity: 1; }
+    50% { opacity: 0.2; }
+    85% { opacity: 1; }
+}
+.cm-cursorLayer .cm-cursor {
+    animation: phase-blink 2200ms steps(1) infinite;
+}
 ```
 
 ### Code Blocks
@@ -310,12 +505,34 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 	--code-number: #hex ~or~ var();
 ```
 
+#### (!) Code Blocks Example Code
+
+```
+/* Code Blocks */
+.markdown-preview-view pre,
+.markdown-source-view pre {
+  background: var(--code-background);
+  border-left: 4px solid var(--mushroom-accent);
+  border-radius: var(--border-radius, 6px);
+  padding: 12px 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+code {
+  background: var(--code-background);
+  color: var(--code-normal);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+```
+
 ### Icons
 
 ```
 	--icon-color-normal: #hex ~or~ var();
 	--icon-color-hover: #hex ~or~ var();
 	--icon-color: #hex ~or~ var();
+	--search-icon-color: #hex ~or~ var();
 ```
 
 ### Nav Items
@@ -328,6 +545,37 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 	--nav-item-background-active: #hex ~or~ var();
 ```
 
+#### (!) Nav File Explorer Example Code
+
+```
+.nav-file-title,
+.nav-folder-title {
+  color: var(--text-muted);
+
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+  background: rgba(64, 171, 217, 0.1);
+}
+
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+  background: rgba(81, 64, 176, 0.3);
+  color: var(--mushroom-glow, #6bc8ff);
+  border-left: 3px solid var(--mushroom-accent, #40abd9);
+}
+```
+
+#### (!) In case of transparent text in a sidebar plugin
+
+```
+.mod-split .nav-file-title-content,
+.mod-split .nav-folder-title-content {
+    --text-normal: var(--text-muted);
+}
+```
+
 ### Titlebar
 
 ```
@@ -335,10 +583,38 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 	--titlebar-color: #hex ~or~ var();
 ```
 
+#### (!) Titlebar Example Code
+
+```
+/* Title Bar */
+.titlebar-text,
+.titlebar-button.mod-logo {
+    color: var(--espresso-base);
+    opacity: 1;
+}
+.titlebar-button {
+    color: var(--icon-color-normal);
+}
+```
+
 ### Block Quotes
 
 ```
 	--blockquote-border-color: #hex ~or~ var();
+```
+
+#### (!) Block Quotes Example Code
+
+```
+/* Blockquotes */
+.markdown-preview-view blockquote {
+  border-left: 4px solid var(--blockquote-border-color);
+  background: rgba(64, 171, 217, 0.08);
+  color: var(--text-normal);
+  padding: 8px 16px;
+  margin: 16px 0;
+  border-radius: 0 6px 6px 0;
+}
 ```
 
 ### Callouts
@@ -348,12 +624,44 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 	--callout-background: #hex ~or~ var();
 ```
 
+#### (!) Callouts Code Example
+
+```
+/* Callouts */
+.callout {
+  border-left: 4px solid var(--callout-color);
+  background: var(--callout-background);
+  border-radius: 0 6px 6px 0;
+  padding: 12px 16px;
+  margin: 16px 0;
+}
+```
+
 ### Status Bar
 
 ```
 	--status-bar-background: #hex ~or~ var();
 	--status-bar-item: #hex ~or~ var();
 	--status-bar-item-hover: #hex ~or~ var();
+```
+
+#### (!) Status Bar Example Code
+
+```
+/* Status Bar */
+.status-bar {
+  background: var(--status-bar-background, #182b59);
+  border-top: 1px solid var(--mushroom-spore, #3a558c);
+  color: var(--text-muted);
+}
+
+.status-bar-item:hover {
+  color: var(--mushroom-accent, #40abd9);
+}
+
+.status-bar-off .status-bar {
+  display: none;
+}
 ```
 
 ### Graphs
@@ -367,6 +675,39 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 	--graph-node-unresolved: #hex ~or~ var();
 ```
 
+#### (!) Graphs Example Code
+
+```
+/* Graph View */
+.graph-view.color-fill {
+  color: var(--graph-node, #40abd9);
+}
+
+.graph-view.color-fill-focused {
+  color: var(--graph-node-focused, #6bc8ff);
+}
+
+.graph-view.color-fill-tag {
+  color: var(--graph-node-tag, #5140b0);
+}
+
+.graph-view.color-fill-attachment {
+  color: var(--graph-node-attachment, #2560a0);
+}
+
+.graph-view.color-fill-unresolved {
+  color: var(--graph-node-unresolved, #ff528f);
+}
+
+.graph-view.color-line {
+  color: var(--graph-line, #3a558c);
+}
+
+.graph-view.color-text {
+  color: var(--text-normal);
+}
+```
+
 ### Tables
 
 ```
@@ -375,6 +716,25 @@ While still within these parameters of either .theme-light or .theme-dark, use t
     --table-row-even-background: #hex ~or~ var();
     --table-row-odd-background: #hex ~or~ var();
     --table-row-hover-background: #hex ~or~ var();
+```
+
+#### (!) Tables Example Code
+
+```
+/* Tables */
+th {
+  background: var(--table-header-background) !important;
+  color: var(--mushroom-glow) !important;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background: var(--table-row-even-background);
+}
+
+tr:nth-child(odd) {
+  background: var(--table-row-odd-background);
+}
 ```
 
 ### Lists
@@ -393,6 +753,16 @@ While still within these parameters of either .theme-light or .theme-dark, use t
     --hr-style: solid;
 ```
 
+#### (!) Horizontal Rules Example Code
+
+```
+/* Horizontal Rules */
+hr {
+  border-color: var(--mushroom-spore);
+  opacity: 0.5;
+}
+```
+
 ### Sidebars and Ribbons
 
 ```
@@ -402,6 +772,15 @@ While still within these parameters of either .theme-light or .theme-dark, use t
     --sidebar-border-color: #hex ~or~ var();
 ```
 
+#### (!) Ribbons Example Code
+
+```
+/* Ribbon */
+.ribbon-off .workspace-ribbon {
+  display: none;
+}
+```
+
 ### Models and Popovers
 
 ```
@@ -409,6 +788,49 @@ While still within these parameters of either .theme-light or .theme-dark, use t
     --modal-border-color: #hex ~or~ var();
     --popover-background: #hex ~or~ var();
     --popover-border-color: #hex ~or~ var();
+```
+
+#### (!) Hover and Popover Example Code
+
+```
+.theme-dark .popover.hover-editor {
+  --he-title-bar-inactive-bg: var(--background-secondary);
+  --he-title-bar-active-bg: var(--background-secondary);
+  --he-title-bar-inactive-fg: var(--text-muted);
+  --he-title-bar-active-fg: var(--text-normal);
+}
+
+.theme-light .popover.hover-editor {
+  --he-title-bar-inactive-bg: var(--background-secondary);
+  --he-title-bar-active-bg: var(--background-secondary);
+  --he-title-bar-inactive-fg: var(--text-muted);
+  --he-title-bar-active-fg: var(--text-normal);
+}
+
+.modal,
+.prompt {
+  background: var(--background-primary);
+  border: 1px solid var(--mushroom-spore);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+```
+
+#### (!) Modals and Tooltip
+
+```
+.modal, .prompt, .menu, .tooltip {
+    background-color: var(--background-primary);
+    border-color: var(--background-modifier-border);
+    color: var(--text-normal);
+}
+.tooltip {
+    --element-selector-highlight-outline: 1px dashed var(--interactive-accent);
+    --element-selector-highlight-background-color: rgba(201, 140, 104, 0.25);
+    --element-selector-tooltip-background-color: var(--background-primary);
+    --element-selector-tooltip-border: 1px solid var(--background-modifier-border);
+    --element-selector-tooltip-border-radius: 6px;
+    --element-selector-tooltip-padding: 1em;
+}
 ```
 
 ### Search Command Palette
@@ -438,6 +860,84 @@ While still within these parameters of either .theme-light or .theme-dark, use t
     --calendar-day-active: #hex ~or~ var();
     --calendar-day-today: #hex ~or~ var();
     
+```
+
+#### (!) Core Plugin Support Example Code
+
+```
+/* Dataview */
+.theme-dark .dataview.table-view-table,
+.theme-dark .dataview.table-view-table th,
+.theme-dark .dataview.table-view-table td {
+  border-color: var(--mushroom-spore);
+}
+
+.theme-light .dataview.table-view-table,
+.theme-light .dataview.table-view-table th,
+.theme-light .dataview.table-view-table td {
+  border-color: var(--mushroom-spore);
+}
+
+/* Kanban */
+body .kanban-plugin {
+  --kanban-border: var(--border-width);
+  --interactive-accent: var(--kanban-accent, var(--mushroom-accent));
+  --interactive-accent-hover: var(--mushroom-glow);
+  background-color: var(--background-primary);
+}
+
+body .kanban-plugin__lane {
+  background: var(--background-secondary);
+  border-radius: var(--border-radius, 6px);
+}
+
+body .kanban-plugin__item {
+  background: var(--background-primary);
+  border-radius: var(--border-radius, 4px);
+  border-left: 3px solid var(--kanban-accent, var(--mushroom-accent));
+}
+
+/* Calendar */
+.calendar-container {
+  --calendar-dot-active: var(--calendar-accent, var(--mushroom-accent));
+  --calendar-dot-today: var(--mushroom-highlight);
+}
+
+.calendar-container .day.today {
+  color: var(--mushroom-highlight);
+  font-weight: 600;
+}
+
+.calendar-container .day.active {
+  color: var(--calendar-accent, var(--mushroom-accent));
+}
+```
+
+### Sync Avatar (optional if you keep track of multiple vaults)
+
+- The avatar typically displays the first letter of your account email/name against a colored background. This variable defines that background color to help it blend with your theme's aesthetic.
+- This variable is only relevant if you use Obsidian Sync. If you don't use Sync, this variable has no visible effect in your vault. Theme developers include it to ensure Sync UI elements match the overall theme design when users do enable Sync.
+
+```
+	--sync-avatar-color-current-user: #hex ~or~ var();
+```
+
+#### (!) Sync Status Icon
+
+```
+/* Sync Status */
+.sync-status-icon {
+  color: var(--mushroom-accent);
+}
+```
+
+#### (!) Vault Name Color
+
+```
+.workspace-ribbon .workspace-ribbon-collapse-btn,
+.workspace-ribbon .workspace-ribbon-pin-btn {
+    color: var(--espresso-base);
+}
 ```
 
 ---
@@ -480,6 +980,29 @@ body.toggle-borders-off ::-webkit-scrollbar-thumb {
     border: none !important;
 }
 
+```
+
+## Search Bar Example
+
+```
+/* Search */
+.search-result {
+  border-left: 3px solid var(--mushroom-accent, #40abd9);
+}
+
+.search-result.is-active {
+  background: rgba(64, 171, 217, 0.15);
+}
+```
+
+### Notifications Example Code
+
+```
+.notice {
+    background-color: var(--background-modifier-cover);
+    color: var(--text-normal);
+    border-left: 3px solid var(--espresso-base);
+}
 ```
 
 ## Workspace Areas
@@ -717,6 +1240,37 @@ These are outside of the .theme-light and .theme-dark brackets.
 }
 ```
 
+### Headings and their Dividers Appearance
+
+```
+/* Headings */
+
+/* This changes them all, or you can do various ones individual */
+
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  color: var(--h1-color);
+  font-weight: 600;
+}
+
+
+/* Dividers for Headings */
+
+.heading-divider h1,
+.heading-divider h2,
+.heading-divider h3,
+.heading-divider h4,
+.heading-divider h5,
+.heading-divider h6 {
+  border-bottom: 2px solid var(--h1-color);
+  padding-bottom: 4px;
+}
+```
+
 ### Status Bar
 
 ```css
@@ -867,6 +1421,44 @@ These are outside of the .theme-light and .theme-dark brackets.
 }
 ```
 
+## Some Example Settings
+
+- Command Palette, Daily Notes, Starred Notes, Random Notes, Sync Status, Tag Pane.
+
+```
+/* Command Palette */
+.suggestion-item.is-selected {
+  background: rgba(64, 171, 217, 0.2);
+  color: var(--text-normal);
+}
+
+/* Daily Notes */
+.workspace-leaf-content[data-type="daily-notes"] .nav-file-title {
+  color: var(--mushroom-accent);
+}
+
+/* Starred Notes */
+.workspace-leaf-content[data-type="starred"] .nav-file-title {
+  color: var(--mushroom-highlight);
+}
+
+/* Random Note */
+.workspace-leaf-content[data-type="random-note"] button {
+  background: var(--mushroom-accent);
+  color: white;
+}
+
+/* Sync Status */
+.sync-status-icon {
+  color: var(--mushroom-accent);
+}
+
+/* Tag Pane */
+.workspace-leaf-content[data-type="tag"] .tree-item-self {
+  color: var(--tag-color);
+}
+```
+
 ---
 
 ## Useful CSS Selectors Compilations
@@ -978,6 +1570,46 @@ Then, add to your Styles Settings area in your CSS. Here you can name them whate
       -
         label: '💜 Purple Glow'
         value: 'accent-purple'
+```
+
+### Translucent Modals
+
+*adds color to the left side of the settings window*
+
+(This is a snippet from my Mocha Latte Cafe 002 code, change the names and colors to match your theme)
+
+```
+/* Dark Mode */
+body.mocha-translucent-modals.theme-dark .modal,
+body.mocha-translucent-modals.theme-dark .prompt,
+body.mocha-translucent-modals.theme-dark .menu {
+  background-color: rgba(30, 20, 15, 0.92) ;
+  backdrop-filter: blur(10px) ;
+  border: 1px solid var(--background-modifier-border) ;
+  color: var(--text-normal) ;
+}
+
+/* Light Mode - Lighter, more readable */
+body.mocha-translucent-modals.theme-light .modal,
+body.mocha-translucent-modals.theme-light .prompt,
+body.mocha-translucent-modals.theme-light .menu {
+  background-color: rgba(221, 204, 188, 0.884) ; /* Light cream */
+  backdrop-filter: blur(8px) ;
+  border: 1px solid var(--background-modifier-border) ;
+  color: var(--text-normal) ;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) ;
+}
+```
+
+add this to Styles Settings:
+
+```
+-
+    id: mocha-translucent-modals
+    title: Translucent Modals
+    description: Semi-transparent settings windows
+    type: class-toggle
+    default: false
 ```
 
 ---
