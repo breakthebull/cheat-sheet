@@ -11,15 +11,6 @@ AUTHOR: Your Name
 LICENSE: CC0-1.0
 VERSION: version #
 ======================================== */
-/* -
-GLOBAL RESETS & FOUNDATIONS
-- */
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
 
 :root {
     /* Font Stack */
@@ -193,10 +184,10 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 ### Backgrounds
 
 ```
-	--background-primary: #hex ~or~ var();
-	--background-primary-alt: #hex ~or~ var();
-	--background-secondary: #hex ~or~ var();
-	--background-secondary-alt: #hex ~or~ var();
+	--background-primary: #hex ~or~ var(); /*Note background*/
+	--background-primary-alt: #hex ~or~ var(); /*Note Title background active*/
+	--background-secondary: #hex ~or~ var(); /*Sidebar background*/
+	--background-secondary-alt: #hex ~or~ var(); /*Sidebar Title background*/
 ```
 
 ### Modifiers
@@ -209,6 +200,7 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 	--background-modifier-border-hover: #hex ~or~ var();
 	--background-modifier-border-focus: #hex ~or~ var();
 	--background-modifier-cover: #hex ~or~ var(); /*Obsidian Title Bar Bg*/
+
 ```
 
 #### (!) Embeds use modifiers--optional
@@ -246,13 +238,14 @@ input:focus, textarea:focus {
 ### Text
 
 ```
-	--text-active: #hex ~or~ var();
-	--text-muted: #hex ~or~ var();
-	--text-faint: #hex ~or~ var();
-	--text-accent: #hex ~or~ var();
+	--text-normal: #hex ~or~ var(); /*Text body of note*/
+	--text-muted: #hex ~or~ var(); /*Text darker for sidebar, toggles, inactive, tags, etc*/
+	--text-faint: #hex ~or~ var(); /*Link brackets color & Gutter Numbers*/
+	--text-accent: #hex ~or~ var(); /*Links*/
 	--text-on-accent: #hex ~or~ var();
-	--text-accent-hover: #hex ~or~ var();
+	--text-accent-hover: #hex ~or~ var(); /*Links hover*/
 	--text-on-accent-hover: #hex ~or~ var();
+	--text-selection: #hex ~or~ var(); /*Text Selections*/
 ```
 
 #### (!) Typography Rules Example Code
@@ -279,10 +272,10 @@ em {
 ### Interactive
 
 ```
-	--interactive-accent: #hex ~or~ var();
-	--interactive-accent-hover: #hex ~or~ var();
-	--interactive-normal: #hex ~or~ var();
-	--interactive-hover: #hex ~or~ var();
+	--interactive-normal: #hex ~or~ var(); /*Button Color*/
+    --interactive-hover: #hex ~or~ var(); /*Button Hovered Color*/
+    --interactive-accent: #hex ~or~ var(); /*Workspace Note Title Underline*/
+    --interactive-accent-hover: #hex ~or~ var(); /*Menu Button Hover*/
 ```
 
 ### Tags
@@ -384,8 +377,8 @@ button.mod-cta:hover {
 ### Highlights
 
 ```
-	--text-highlight-bg: #hex ~or~ var();
-	--text-selection: #hex ~or~ var();
+	--text-highlight-bg: #hex ~or~ var(); /*Search Matches*/
+    --text-highlight-bg-active: #hex ~or~ var(); /*Active Search Match (Preview Mode)*/
 ```
 
 ### Links
@@ -942,6 +935,29 @@ body .kanban-plugin__item {
 ```
 
 ---
+
+## Before Code, After '.theme {}' Sections
+
+```
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}*/
+
+/*----Startup Progress Bar Screen----*/
+/*Startup Progress Bar Window*/
+.progress-bar {}
+
+/*Startup Text*/
+.progress-bar .progress-bar-message {}
+
+/*Startup Progress Bar Background*/
+.progress-bar-indicator .progress-bar-line {}
+
+/*Startup Progress Bar Moving Line*/
+.progress-bar-indicator .progress-bar-subline {}
+```
 
 ## Border Toggle
 
