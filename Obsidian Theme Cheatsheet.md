@@ -208,6 +208,7 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 	--background-modifier-hover: #hex ~or~ var();
 	--background-modifier-border-hover: #hex ~or~ var();
 	--background-modifier-border-focus: #hex ~or~ var();
+	--background-modifier-cover: #hex ~or~ var(); /*Obsidian Title Bar Bg*/
 ```
 
 #### (!) Embeds use modifiers--optional
