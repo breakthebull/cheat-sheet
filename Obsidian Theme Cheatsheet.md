@@ -173,6 +173,7 @@ VERSION: version #
 	--color003: #hex;
 	--color004: #hex;
 	--color005: #hex;
+	--color006: #hex;
 	--color007: #hex;
 }
 ```
