@@ -14,7 +14,7 @@ I built this while working on my other themes and testing out various settings. 
 # Files
 
 ## Main File
-- [Full File Download](https://github.com/breakthebull/cheat-sheet/blob/main/Obsidian%20Cheat%20Sheet%20Guide/Obsidian%20Cheat%20Sheet%20Guide.md)
+- [Full File Download](https://github.com/breakthebull/cheat-sheet/blob/main/Obsidian%20Theme%20Cheatsheet.md)
 
 ## Individual Chapters
 - [1.01 Theme Color Guide](https://github.com/breakthebull/cheat-sheet/tree/main/Obsidian%20Cheat%20Sheet%20Guide/1.01%20Theme%20Color%20Guide)
