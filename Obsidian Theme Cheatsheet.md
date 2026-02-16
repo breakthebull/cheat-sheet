@@ -1,6 +1,6 @@
-# Theme Color Guide
+# 1.01 Theme Color Guide
 
-## Beginning The Code - Basically
+## 1.02 Beginning The Code - Basically
 
 (most examples are used by [Purple Mushroom Fantasy](https://github.com/breakthebull/pmf) and [Mocha Latte Cafe 002](https://github.com/breakthebull/cappuccino))
 
@@ -26,9 +26,9 @@ VERSION: version #
 
 ---
 
-## Additional Roots
+## 1.03 Additional Roots
 
-### Typography and Font Variables
+### 1.03-1 Typography and Font Variables
 
 ```
 :root {
@@ -56,7 +56,7 @@ VERSION: version #
 }
 ```
 
-### Borders and Radiuses
+### 1.03-2 Borders and Radiuses
 
 ```
 :root {
@@ -84,7 +84,7 @@ VERSION: version #
 }
 ```
 
-### Shadows and Elevations
+### 1.03-3 Shadows and Elevations
 
 ```
 :root {
@@ -99,7 +99,7 @@ VERSION: version #
 }
 ```
 
-### Gradients
+### 1.03-4 Gradients
 
 ```
 :root {
@@ -113,7 +113,7 @@ VERSION: version #
 }
 ```
 
-### Transitions and Animations
+### 1.03-5 Transitions and Animations
 
 ```
 :root {
@@ -131,7 +131,7 @@ VERSION: version #
 }
 ```
 
-### Mobile Responsive
+### 1.03-6 Mobile Responsive
 
 ```
 :root {
@@ -148,7 +148,7 @@ VERSION: version #
 
 ---
 
-## Next, Light or Dark?
+## 1.04 Next, Light or Dark?
 
 *If I put this (!) that means it belongs OUTSIDE the '.theme {}' area*
 
@@ -164,7 +164,7 @@ VERSION: version #
 
 ---
 
-## Pick A Palette, and Stick to it
+## 1.05 Pick A Palette, and Stick to it
 
 ```
 .theme-light {
@@ -182,7 +182,7 @@ VERSION: version #
 
 While still within these parameters of either .theme-light or .theme-dark, use the following;
 
-### Backgrounds
+### 1.05-01 Backgrounds
 
 ```
 	--background-primary: #hex ~or~ var(); /*Note background*/
@@ -191,7 +191,7 @@ While still within these parameters of either .theme-light or .theme-dark, use t
 	--background-secondary-alt: #hex ~or~ var(); /*Sidebar Title background*/
 ```
 
-### Modifiers
+### 1.05-02 Modifiers
 
 ```
 	--background-modifier-border: #hex ~or~ var(); /*Border outline of quotes, tables, line breaks*/
@@ -236,7 +236,7 @@ input:focus, textarea:focus {
 }
 ```
 
-### Text
+### 1.05-03 Text
 
 ```
 	--text-normal: #hex ~or~ var(); /*Text body of note*/
@@ -264,13 +264,13 @@ em {
 }
 ```
 
-### Dropdowns
+### 1.05-04 Dropdowns
 
 ```
 --dropdown-background: #hex ~or~ var();
 ```
 
-### Interactive
+### 1.05-05 Interactive
 
 ```
 	--interactive-normal: #hex ~or~ var(); /*Button Color*/
@@ -279,7 +279,7 @@ em {
     --interactive-accent-hover: #hex ~or~ var(); /*Menu Button Hover*/
 ```
 
-### Tags
+### 1.05-06 Tags
 
 ```
 	--tag-background: #hex ~or~ var();
@@ -309,7 +309,7 @@ em {
 }
 ```
 
-### Metadata
+### 1.05-07 Metadata
 
 ```
 	--metadata-label-text-color: #hex ~or~ var();
@@ -332,7 +332,7 @@ em {
 }
 ```
 
-### Buttons
+### 1.05-08 Buttons
 
 *(this will override the interactives if you want the buttons separate from your chosen interactive color placements)*
 
@@ -377,14 +377,14 @@ button.mod-cta:hover {
 }
 ```
 
-### Highlights
+### 1.05-09 Highlights
 
 ```
 	--text-highlight-bg: #hex ~or~ var(); /*Search Matches*/
     --text-highlight-bg-active: #hex ~or~ var(); /*Active Search Match (Preview Mode)*/
 ```
 
-### Links
+### 1.05-10 Links
 
 *(this will override the accent links if you need these to be separate from your accent chosen locations)*
 
@@ -436,7 +436,7 @@ a.is-unresolved,
 }
 ```
 
-### Headings
+### 1.05-11 Headings
 
 ```
 	--h1-color: #hex ~or~ var();
@@ -447,7 +447,7 @@ a.is-unresolved,
 	--h6-color: #hex ~or~ var();
 ```
 
-### Checkboxes
+### 1.05-12 Checkboxes
 
 ```
 	--checkbox-color: #hex ~or~ var();
@@ -463,7 +463,7 @@ input[type="checkbox"] {
 }
 ```
 
-### Scrollbar
+### 1.05-13 Scrollbar
 
 ```
 	--scrollbar-thumb-bg: #hex ~or~ var();
@@ -492,7 +492,7 @@ input[type="checkbox"] {
 }
 ```
 
-### Code Blocks
+### 1.05-14 Code Blocks
 
 ```
 	--code-background: #hex ~or~ var();
@@ -525,7 +525,7 @@ code {
 }
 ```
 
-### Icons
+### 1.05-15 Icons
 
 ```
 	--icon-color-normal: #hex ~or~ var();
@@ -534,7 +534,7 @@ code {
 	--search-icon-color: #hex ~or~ var();
 ```
 
-### Nav Items
+### 1.05-16 Nav Items
 
 ```
 	--nav-item-color: #hex ~or~ var();
@@ -575,7 +575,7 @@ code {
 }
 ```
 
-### Titlebar
+### 1.05-17 Titlebar
 
 ```
 	--titlebar-background-color: #hex ~or~ var();
@@ -596,7 +596,7 @@ code {
 }
 ```
 
-### Block Quotes
+### 1.05-18 Block Quotes
 
 ```
 	--blockquote-border-color: #hex ~or~ var();
@@ -616,7 +616,7 @@ code {
 }
 ```
 
-### Callouts
+### 1.05-19 Callouts
 
 ```
 	--callout-color: #hex ~or~ var();
@@ -636,7 +636,7 @@ code {
 }
 ```
 
-### Status Bar
+### 1.05-20 Status Bar
 
 ```
 	--status-bar-background: #hex ~or~ var();
@@ -663,7 +663,7 @@ code {
 }
 ```
 
-### Graphs
+### 1.05-21 Graphs
 
 ```
 	--graph-line: #hex ~or~ var();
@@ -707,7 +707,7 @@ code {
 }
 ```
 
-### Tables
+### 1.05-22 Tables
 
 ```
 	--table-border-color: #hex ~or~ var();
@@ -736,7 +736,7 @@ tr:nth-child(odd) {
 }
 ```
 
-### Lists
+### 1.05-23 Lists
 
 ```
 	--list-marker-color: #hex ~or~ var();
@@ -744,7 +744,7 @@ tr:nth-child(odd) {
     --list-spacing: 0.5em;
 ```
 
-### Horizontal Rules
+### 1.05-24 Horizontal Rules
 
 ```
 	--hr-color: #hex ~or~ var();
@@ -762,7 +762,7 @@ hr {
 }
 ```
 
-### Sidebars and Ribbons
+### 1.05-25 Sidebars and Ribbons
 
 ```
 	--ribbon-background: #hex ~or~ var();
@@ -780,7 +780,7 @@ hr {
 }
 ```
 
-### Models and Popovers
+### 1.05-26 Models and Popovers
 
 ```
 	--modal-background: #hex ~or~ var();
@@ -832,7 +832,7 @@ hr {
 }
 ```
 
-### Search Command Palette
+### 1.05-27 Search Command Palette
 
 ```
 	--search-result-background: #hex ~or~ var();
@@ -842,7 +842,7 @@ hr {
     --suggestion-background-active: #hex ~or~ var();
 ```
 
-### Core Plugin Support
+### 1.05-28 Core Plugin Support
 
 ```
 /* Kanban */
@@ -912,7 +912,7 @@ body .kanban-plugin__item {
 }
 ```
 
-### Sync Avatar (optional if you keep track of multiple vaults)
+### 1.05- 29 Sync Avatar (optional if you keep track of multiple vaults)
 
 - The avatar typically displays the first letter of your account email/name against a colored background. This variable defines that background color to help it blend with your theme's aesthetic.
 - This variable is only relevant if you use Obsidian Sync. If you don't use Sync, this variable has no visible effect in your vault. Theme developers include it to ensure Sync UI elements match the overall theme design when users do enable Sync.
@@ -941,7 +941,7 @@ body .kanban-plugin__item {
 
 ---
 
-## Before Code, After '.theme {}' Sections
+## 1.06 Before Code, After '.theme {}' Sections
 
 ```
 *,
@@ -964,7 +964,7 @@ body .kanban-plugin__item {
 .progress-bar-indicator .progress-bar-subline {}
 ```
 
-## Border Toggle
+## 1.07 Border Toggle
 
 Add this at the end of the file above Styles Settings:
 
@@ -1004,7 +1004,7 @@ body.toggle-borders-off ::-webkit-scrollbar-thumb {
 
 ```
 
-## Search Bar Example
+## 1.08 Search Bar Example
 
 ```
 /* Search */
@@ -1017,7 +1017,7 @@ body.toggle-borders-off ::-webkit-scrollbar-thumb {
 }
 ```
 
-### Notifications Example Code
+### 1.08-01 Notifications Example Code
 
 ```
 .notice {
@@ -1027,17 +1027,17 @@ body.toggle-borders-off ::-webkit-scrollbar-thumb {
 }
 ```
 
-# Base64 Background Images in Obsidian Themes  
+# 2.01 Base64 Background Images in Obsidian Themes  
 *A step-by-step guide for adding base64-encoded background images to sidebar panels*
 
 ---
 
-## Overview
+## 2.02 Overview
 This technique adds custom background images to your theme's **sidebar panels** (File Explorer, Backlinks, Tag pane, etc.) using base64 encoding. The image is embedded directly in your CSS file, making it portable and self-contained.
 
 ---
 
-## 🔧 Step 1: Prepare Your Image
+## 2.03 Step 1: Prepare Your Image
 
 ### A. Choose the Right Image
 - **Format**: SVG (recommended) or PNG/JPG
@@ -1063,7 +1063,7 @@ This technique adds custom background images to your theme's **sidebar panels** 
 
 ---
 
-## Step 2: Add the Background CSS
+## 2.04 Step 2: Add the Background CSS
 
 ### A. Target the Correct Elements
 Add this CSS block to your theme file (place after your `:root` section):
@@ -1088,7 +1088,7 @@ Add this CSS block to your theme file (place after your `:root` section):
 
 ---
 
-## Step 3: Ensure Text Readability
+## 2.05 Step 3: Ensure Text Readability
 
 ### A. Add a Dark Overlay (Recommended)
 This prevents washed-out text in light mode:
@@ -1118,7 +1118,7 @@ This prevents washed-out text in light mode:
 
 ---
 
-## Step 4: Make It Theme-Aware (Optional)
+## 2.06 Step 4: Make It Theme-Aware (Optional)
 
 If you want different images for dark/light modes:
 
@@ -1138,7 +1138,7 @@ If you want different images for dark/light modes:
 
 ---
 
-## Step 5: Add Style Settings Toggle
+## 2.07 Step 5: Add Style Settings Toggle
 
 ### A. Add to Your `@settings` Block
 Include this in your YAML configuration:
@@ -1169,9 +1169,9 @@ body.sidebar-bg-toggle .mod-sidedock .workspace-leaf-content::before {
 
 ---
 
-## Step 6: Test & Troubleshoot
+## 2.08 Step 6: Test & Troubleshoot
 
-### Common Issues & Fixes:
+### 2.08-01 Common Issues & Fixes:
 
 | Issue | Solution |
 |-------|----------|
@@ -1181,7 +1181,7 @@ body.sidebar-bg-toggle .mod-sidedock .workspace-leaf-content::before {
 | **Performance lag** | Compress image further; keep base64 under 50KB |
 | **Toggle not working** | Verify class name matches (`sidebar-bg-toggle`) and CSS uses `body.sidebar-bg-toggle` |
 
-### Testing Checklist:
+### 2.08-02 Testing Checklist:
 - ✅ Dark mode: Background visible, text readable
 - ✅ Light mode: Background visible, text readable  
 - ✅ Toggle OFF: No background appears
@@ -1190,19 +1190,19 @@ body.sidebar-bg-toggle .mod-sidedock .workspace-leaf-content::before {
 
 ---
 
-## Tips
+## 2.09 Tips
 
-### Performance Optimization
+### 2.09-01 Performance Optimization
 - **Use SVG** when possible (smaller file size, scales perfectly)
 - **Avoid large photos** – stick to simple patterns or illustrations
 - **Test file size** – themes over 100KB may slow down Obsidian
 
-### Design Best Practices
+### 2.09-02 Design Best Practices
 - **Subtlety is key** – backgrounds should enhance, not distract
 - **Match your theme** – use colors from your existing palette
 - **Consider accessibility** – ensure sufficient contrast for all users
 
-### Advanced Customization
+### 2.09-03 Advanced Customization
 - **Different images per panel**: Target specific data types:
   ```css
   /* File Explorer only */
@@ -1214,7 +1214,7 @@ body.sidebar-bg-toggle .mod-sidedock .workspace-leaf-content::before {
 
 ---
 
-## Example Complete Implementation
+## 2.10 Example Complete Implementation
 
 ```css
 /* Style Settings Toggle */
@@ -1245,11 +1245,11 @@ body.sidebar-bg-toggle .mod-sidedock .workspace-leaf-content > * {
 
 With this setup, users get a beautiful, customizable background that enhances your theme without sacrificing readability! 🍄✨
 
-## Workspace Areas
+# 3.01 Workspace Areas
 
 These are outside of the .theme-light and .theme-dark brackets.
 
-### Change the Tab Header Container Based on Theme Setting
+### 3.02 Change the Tab Header Container Based on Theme Setting
 
 ```
 .theme-light .workspace-tab-header-container {
@@ -1263,7 +1263,7 @@ These are outside of the .theme-light and .theme-dark brackets.
 
 ---
 
-## Common `mod-` Classes Explained
+## 3.03 Common `mod-` Classes Explained
 
 ```css
 /* Left Sidebar (File Explorer, etc.) */
@@ -1317,7 +1317,7 @@ These are outside of the .theme-light and .theme-dark brackets.
 }
 ```
 
-### Workspace Tab Headers
+### 3.03-01 Workspace Tab Headers
 
 ```css
 /* All Tab Headers Container */
@@ -1376,7 +1376,7 @@ These are outside of the .theme-light and .theme-dark brackets.
 }
 ```
 
-### Workspace Leaves Content Areas
+### 3.03-02 Workspace Leaves Content Areas
 
 ```css
 /* Main Content Area */
@@ -1408,7 +1408,7 @@ These are outside of the .theme-light and .theme-dark brackets.
 }
 ```
 
-### Sidebars & Ribbons
+### 3.03-03 Sidebars & Ribbons
 
 ```css
 /* Left Ribbon (Sidebar toggle icons) */
@@ -1454,7 +1454,7 @@ These are outside of the .theme-light and .theme-dark brackets.
 }
 ```
 
-### Resize Handles (Between Panes)
+### 3.03-04 Resize Handles (Between Panes)
 
 ```css
 /* Vertical Split Handle (Between side-by-side panes) */
@@ -1480,7 +1480,7 @@ These are outside of the .theme-light and .theme-dark brackets.
 }
 ```
 
-### Headings and their Dividers Appearance
+### 3.03-05 Headings and their Dividers Appearance
 
 ```
 /* Headings */
@@ -1511,7 +1511,7 @@ These are outside of the .theme-light and .theme-dark brackets.
 }
 ```
 
-### Status Bar
+### 3.03-06 Status Bar
 
 ```css
 /* Status Bar Container */
@@ -1538,7 +1538,7 @@ These are outside of the .theme-light and .theme-dark brackets.
 }
 ```
 
-### Title Bar (Desktop App Only)
+### 3.03-07 Title Bar (Desktop App Only)
 
 ```css
 /* Title Bar Container */
@@ -1563,7 +1563,7 @@ These are outside of the .theme-light and .theme-dark brackets.
 }
 ```
 
-### Stacked Tabs Layout
+### 3.03-08 Stacked Tabs Layout
 
 ```css
 /* Stacked Tab Container */
@@ -1592,7 +1592,7 @@ These are outside of the .theme-light and .theme-dark brackets.
 }
 ```
 
-### Workspace Drop Target (Drag & Drop)
+### 3.03-09 Workspace Drop Target (Drag & Drop)
 
 ```css
 /* Drop Overlay (When dragging files/panes) */
@@ -1607,7 +1607,7 @@ These are outside of the .theme-light and .theme-dark brackets.
 }
 ```
 
-### Practical Examples
+### 3.03-10 Practical Examples
 
 ```css
 /* Make active tab header match accent color */
@@ -1661,7 +1661,7 @@ These are outside of the .theme-light and .theme-dark brackets.
 }
 ```
 
-## Some Example Settings
+## 3.04 Some Example Settings
 
 - Command Palette, Daily Notes, Starred Notes, Random Notes, Sync Status, Tag Pane.
 
@@ -1701,7 +1701,7 @@ These are outside of the .theme-light and .theme-dark brackets.
 
 ---
 
-## Useful CSS Selectors Compilations
+## 3.05 Useful CSS Selectors Compilations
 
 ```
 /* Active file in file explorer */
@@ -1765,7 +1765,7 @@ These are outside of the .theme-light and .theme-dark brackets.
 }
 ```
 
-### Accent Presets
+### 3.05-01 Accent Presets
 
 Essentially recoloring your established color names. Changes the elements those colors are being used by. Can use all in your palette or just do a few. Can make MANY different accents.
 
@@ -1812,7 +1812,7 @@ Then, add to your Styles Settings area in your CSS. Here you can name them whate
         value: 'accent-purple'
 ```
 
-### Translucent Modals
+### 3.05-01 Translucent Modals
 
 *adds color to the left side of the settings window*
 
@@ -1854,7 +1854,7 @@ add this to Styles Settings:
 
 ---
 
-## Style Settings Integrations
+## 3.06 Style Settings Integrations
 
 ```
 /* ========================================
@@ -1896,7 +1896,7 @@ settings:
 */
 ```
 
-### Add This To Styles Setting For Scrollbar Customization
+### 3.06-01 Add This To Styles Setting For Scrollbar Customization
 
 ```
 	- id: scrollbar-header
@@ -1921,7 +1921,7 @@ settings:
 ```
 
 
-### Example From [Purple Mushroom Fantasy](https://github.com/breakthebull/pmf)
+### 3.06-02 Example From [Purple Mushroom Fantasy](https://github.com/breakthebull/pmf)
 
 ```
 /* ========================================
@@ -2236,13 +2236,14 @@ settings:
 */
 ```
 
-# CSS Snippets (Copy-Paste Ready)
+---
+
+# 4.01 CSS Snippets (Copy-Paste Ready)
 
 Here are beginner-friendly CSS snippets you can drop into your **CSS Snippets folder** (`Settings → Appearance → CSS snippets`). Each is self-contained and works immediately when toggled on!
 
----
 
-## Visual Enhancements
+## 4.02 Visual Enhancements
 
 ### 1. **Colored Blockquotes**
 Makes blockquotes stand out with a colored border.
@@ -2311,9 +2312,7 @@ Makes scrollbars prettier and thinner.
 }
 ```
 
----
-
-## Editor & Reading Improvements
+## 4.03 Editor & Reading Improvements
 
 ### 4. **Wider Editor (More Writing Space)**
 Increases the max width of the editor and preview.
@@ -2368,9 +2367,7 @@ Highlights the current line you're typing on.
 }
 ```
 
----
-
-## Tag & Link Styling
+## 4.04 Tag & Link Styling
 
 ### 7. **Pretty Tags**
 Makes tags look like colorful badges.
@@ -2414,9 +2411,7 @@ Makes internal links more visible.
 }
 ```
 
----
-
-## Status Bar & Interface
+## 4.05 Status Bar & Interface
 
 ### 9. **Hide Status Bar**
 Cleans up the bottom of the screen.
@@ -2453,9 +2448,7 @@ Makes sidebars slightly see-through.
 }
 ```
 
----
-
-## Callouts & Highlights
+## 4.06 Callouts & Highlights
 
 ### 11. **Highlight Search Results**
 Makes searched text more prominent.
@@ -2490,9 +2483,7 @@ mark {
 }
 ```
 
----
-
-## Task & List Tweaks
+## 4.07 Task & List Tweaks
 
 ### 13. **Bigger Checkboxes**
 Makes task checkboxes easier to click.
@@ -2525,9 +2516,7 @@ ul > li::marker {
 }
 ```
 
----
-
-## Minimal Mode Helpers
+## 4.08 Minimal Mode Helpers
 
 ### 15. **Hide Title Bar**
 Removes the file title at the top of notes.
@@ -2563,9 +2552,7 @@ Cleans up the file explorer.
 }
 ```
 
----
-
-## Bonus: Quick Theme Switcher Helper
+## 4.09 Bonus: Quick Theme Switcher Helper
 
 ### 17. **Dark/Light Mode Toggle Button**
 Adds a button to the status bar to switch themes.
@@ -2586,7 +2573,7 @@ Adds a button to the status bar to switch themes.
 
 ---
 
-## How to Use These Snippets
+# 5.01 How to Use These Snippets
 
 1. **Create a new file** in your vault's `.obsidian/snippets/` folder
 2. **Name it** something descriptive (e.g., `pretty-tags.css`)
@@ -2594,7 +2581,7 @@ Adds a button to the status bar to switch themes.
 4. **Go to Settings → Appearance → CSS snippets**
 5. **Toggle it on** (refresh if needed with `Ctrl+R` / `Cmd+R`)
 
-###  Tips
+###  5.01-01 Tips
 
 - **Test one at a time** to avoid conflicts
 - **Use `!important`** to override Obsidian's default styles
