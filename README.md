@@ -6,4 +6,7 @@ Also check out [Obsidian's Theme Community Hub for templates and CSS tips](https
 
 I built this while working on my other themes and testing out various settings. I figured others may also find it useful. 😄
 
+## Updates
+- Added DETAILED Base 64 Image use for themes instructions.
+
 (The .md file will be more updated than the pdf)
