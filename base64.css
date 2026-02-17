@@ -1,0 +1,55 @@
+/* ========================================
+   SIDEBAR BACKGROUND - Base64 Image
+   ======================================== */
+.theme-dark .mod-sidedock .workspace-leaf-content {
+  background-image: url("image/svg+xml;base64,YOUR_BASE64_STRING_HERE");
+  background-size: cover;        /* or 'contain', 'repeat' */
+  background-position: center;   /* adjust as needed */
+  background-repeat: no-repeat; /* or 'repeat' for patterns */
+  background-attachment: local;  /* scrolls with content */
+  position: relative;           /* required for overlay */
+  filter: brightness(0.9) contrast(1.0) saturate(1.3);
+  background-blend-mode: multiply;
+  background-color: var(--espresso-hover);
+}
+
+/* Dark overlay for readability */
+.theme-dark .mod-sidedock .workspace-leaf-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark mode */
+  pointer-events: none;
+  z-index: 0;
+}
+
+.theme-dark .mod-sidedock .workspace-leaf-content {
+  background-image: url("image/svg+xml;base64,YOUR_BASE64_STRING_HERE");
+  background-size: cover;        /* or 'contain', 'repeat' */
+  background-position: center;   /* adjust as needed */
+  background-repeat: no-repeat; /* or 'repeat' for patterns */
+  background-attachment: local;  /* scrolls with content */
+  position: relative;           /* required for overlay */
+  filter: brightness(0.9) contrast(1.0) saturate(1.3);
+  background-blend-mode: multiply;
+  background-color: var(--espresso-hover);
+}
+
+/* Dark overlay for readability */
+.theme-light .mod-sidedock .workspace-leaf-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark mode */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Keep content above overlay */
+.mod-sidedock .workspace-leaf-content > * {
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(1.5px);
+}
+
+/* add this if putting in styles settings: body.sidebar-bg-toggle  */
