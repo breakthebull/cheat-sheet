@@ -1225,6 +1225,47 @@ body.sidebar-bg-toggle .mod-sidedock .workspace-leaf-content::before {
 }
 
 /* add this if putting in styles settings: body.sidebar-bg-toggle  */
+
+
+
+
+
+/*========== empty state container ===============*/
+.empty-stat-container {
+  background-image: url("image/svg+xml;base64,YOUR_BASE64_STRING_HERE");
+  background-size: cover;        /* or 'contain', 'repeat' */
+  background-position: center;
+  justify-content: center;
+  /* adjust as needed */
+  background-repeat: no-repeat; /* or 'repeat' for patterns */
+  background-attachment: local;  /* scrolls with content */
+  position: relative;           /* required for overlay */
+  filter: brightness(0.9) contrast(1.0) saturate(1.3);
+  background-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--espresso-hover);
+}
+
+/* hide the default help text: optional */
+.empty-state-title,
+.empty-state-action-list {
+  display: none;
+}
+
+
+
+/* ==================== Customize Titlebar ============ */
+.theme-dark .titlebar {
+  background-image: url();
+  background-size: cover;        /* or 'contain', 'repeat' */
+  background-position: center;   /* adjust as needed */
+  background-repeat: no-repeat; /* or 'repeat' for patterns */
+  filter: brightness(0.9) contrast(1.0) saturate(1.3);
+  background-blend-mode: multiply;
+  background-color: var(--titlebar-background-color);
+
+}
 ```
 
 ---
