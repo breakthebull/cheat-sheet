@@ -5,48 +5,6 @@ LICENSE: CC0-1.0
 VERSION: version #
 ======================================== */
 
-:root {
-    /* Font Stack */
-    --default-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --font-monospace: "Source Code Pro", "Fira Code", Consolas, monospace;
-
-    /* Font Sizes */
-    --font-ui-smallest: 10px;
-    --font-ui-small: 12px;
-    --font-ui-medium: 14px;
-    --font-ui-large: 16px;
-    --font-ui-largest: 18px;
-
-    /* Font Weights */
-    --font-normal: 400;
-    --font-medium: 500;
-    --font-semibold: 600;
-    --font-bold: 700;
-
-    /* Line Heights */
-    --line-height-tight: 1.2;
-    --line-height-normal: 1.5;
-    --line-height-loose: 1.8;
-
-    /* Letter Spacing */
-    --letter-spacing-normal: 0;
-    --letter-spacing-wide: 0.05em;
-
-    /* Typography from Style Settings */
-    --font-size-normal: 16px;
-    --font-size-code: 15px;
-    --line-height-normal: 1.5;
-
-    /* Breakpoints */
-    --breakpoint-mobile: 480px;
-    --breakpoint-tablet: 768px;
-    --breakpoint-desktop: 1024px;
-
-    /* Mobile-specific */
-    --mobile-font-size: 14px;
-    --mobile-padding: 16px;
-}
-
 .theme-light {
 
     /* Palettes */
@@ -413,9 +371,9 @@ VERSION: version #
     --suggestion-background: #hex ~or~ var();
     --suggestion-background-active: #hex ~or~ var();
 
-    /* Core Plugins */
+/* Core Plugins */
 
-    /* Kanban */
+/* Kanban */
     --kanban-lane-background: #hex ~or~ var();
     --kanban-card-background: #hex ~or~ var();
     --kanban-card-border: #hex ~or~ var();
@@ -431,13 +389,71 @@ VERSION: version #
 }
 
 /*Box Sizing Reset - this makes it easier to set any ::before and ::after pseudo-elements' dimensions,
-since it includes any border and padding into the height and width values you set.
+since it includes any border and padding into the height and width values you set.*/
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-}*/
+    box-sizing: border-box;
+}
+
+:root {
+    /* Font Stack */
+    --default-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-monospace: "Source Code Pro", "Fira Code", Consolas, monospace;
+
+    /* Font Sizes */
+    --font-ui-smallest: 10px;
+    --font-ui-small: 12px;
+    --font-ui-medium: 14px;
+    --font-ui-large: 16px;
+    --font-ui-largest: 18px;
+
+    /* Font Weights */
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    /* Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-loose: 1.8;
+
+    /* Letter Spacing */
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.05em;
+
+    /* Typography from Style Settings */
+    --font-size-normal: 16px;
+    --font-size-code: 15px;
+    --line-height-normal: 1.5;
+
+    /* Breakpoints */
+    --breakpoint-mobile: 480px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+
+    /* Mobile-specific */
+    --mobile-font-size: 14px;
+    --mobile-padding: 16px;
+}
+
+.theme-light .titlebar {
+  background-color: var(--color-accent);
+}
+
+.theme-light .titlebar-text {
+  color: var(--titlebar-background-color);
+}
+
+.theme-dark .titlebar {
+  background-color: var(--color-accent);
+}
+
+.theme-dark .titlebar-text {
+  color: var(--titlebar-background-color);
+}
 
 /*----Startup Progress Bar Screen----*/
 /*Startup Progress Bar Window*/
