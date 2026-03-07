@@ -1,0 +1,860 @@
+/* ========================================
+OBSIDIAN THEME: Theme Name
+AUTHOR: Your Name
+LICENSE: CC0-1.0
+VERSION: version #
+======================================== */
+
+:root {
+    /* Font Stack */
+    --default-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-monospace: "Source Code Pro", "Fira Code", Consolas, monospace;
+
+    /* Font Sizes */
+    --font-ui-smallest: 10px;
+    --font-ui-small: 12px;
+    --font-ui-medium: 14px;
+    --font-ui-large: 16px;
+    --font-ui-largest: 18px;
+
+    /* Font Weights */
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    /* Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-loose: 1.8;
+
+    /* Letter Spacing */
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.05em;
+
+    /* Typography from Style Settings */
+    --font-size-normal: 16px;
+    --font-size-code: 15px;
+    --line-height-normal: 1.5;
+
+    /* Breakpoints */
+    --breakpoint-mobile: 480px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+
+    /* Mobile-specific */
+    --mobile-font-size: 14px;
+    --mobile-padding: 16px;
+}
+
+.theme-light {
+
+    /* Palettes */
+    --color001: #hex;
+	--color002: #hex;
+	--color003: #hex;
+	--color004: #hex;
+	--color005: #hex;
+    --color006: #hex;
+	--color007: #hex;
+
+    /* Backgrounds */
+    --background-primary: #hex ~or~ var(); /*Note background*/
+	--background-primary-alt: #hex ~or~ var(); /*Note Title background active*/
+	--background-secondary: #hex ~or~ var(); /*Sidebar background*/
+	--background-secondary-alt: #hex ~or~ var(); /*Sidebar Title background*/
+
+    /* Modifiers */
+    --background-modifier-border: #hex ~or~ var(); /*Border outline of quotes, tables, line breaks*/
+	--background-modifier-form-field: #hex ~or~ var();
+	--background-modifier-form-field-highlighted: #hex ~or~ var();
+	--background-modifier-hover: #hex ~or~ var();
+	--background-modifier-border-hover: #hex ~or~ var();
+	--background-modifier-border-focus: #hex ~or~ var();
+	--background-modifier-cover: #hex ~or~ var(); /*Obsidian Title Bar Bg*/
+
+    /* Text */
+    --text-normal: #hex ~or~ var(); /*Text body of note*/
+	--text-muted: #hex ~or~ var(); /*Text darker for sidebar, toggles, inactive, tags, etc*/
+	--text-faint: #hex ~or~ var(); /*Link brackets color & Gutter Numbers*/
+	--text-accent: #hex ~or~ var(); /*Links*/
+	--text-on-accent: #hex ~or~ var();
+	--text-accent-hover: #hex ~or~ var(); /*Links hover*/
+	--text-on-accent-hover: #hex ~or~ var();
+	--text-selection: #hex ~or~ var(); /*Text Selections*/
+
+    /* Dropdowns */
+    --dropdown-background: #hex ~or~ var();
+
+    /* Interactives */
+    --interactive-normal: #hex ~or~ var(); /*Button Color*/
+    --interactive-hover: #hex ~or~ var(); /*Button Hovered Color*/
+    --interactive-accent: #hex ~or~ var(); /*Workspace Note Title Underline*/
+    --interactive-accent-hover: #hex ~or~ var(); /*Menu Button Hover*/
+
+    /* Tags */
+    --tag-background: #hex ~or~ var();
+	--tag-color: #hex ~or~ var();
+	--tag-background-hover: #hex ~or~ var();
+	--tag-color-hover: #hex ~or~ var();
+	--tag-border-color: #hex ~or~ var();
+
+    /* Metadata */
+    --metadata-label-text-color: #hex ~or~ var();
+	--metadata-label-background: #hex ~or~ var();
+	--metadata-property-background: #hex ~or~ var();
+
+    /* Buttons if separate from interactives */
+    --button-background: #hex ~or~ var();
+	--button-color: #hex ~or~ var();
+	--button-background-hover: #hex ~or~ var();
+	--button-color-hover: #hex ~or~ var();
+
+    /* Highlights */
+    --text-highlight-bg: #hex ~or~ var(); /*Search Matches*/
+    --text-highlight-bg-active: #hex ~or~ var(); /*Active Search Match (Preview Mode)*/
+
+    /* Links if separate from accent */
+    --link-color: #hex ~or~ var();
+	--link-color-hover: #hex ~or~ var();
+	--backlink-border-color: #hex ~or~ var();
+    --backlink-background: #hex ~or~ var();
+    --backlink-title-color: #hex ~or~ var();
+
+    /* Headings */
+    --h1-color: #hex ~or~ var();
+	--h2-color: #hex ~or~ var();
+	--h3-color: #hex ~or~ var();
+	--h4-color: #hex ~or~ var();
+	--h5-color: #hex ~or~ var();
+	--h6-color: #hex ~or~ var();
+
+    /* Checkboxes */
+    --checkbox-color: #hex ~or~ var();
+	--checkbox-color-hover: #hex ~or~ var();
+
+    /* Scrollbar */
+    --scrollbar-thumb-bg: #hex ~or~ var();
+	--scrollbar-active-thumb-bg: #hex ~or~ var();
+	--scrollbar-background: #hex ~or~ var();
+	--scrollbar-color: #hex ~or~ var();
+
+    /* Codeblocks */
+    --code-background: #hex ~or~ var();
+	--code-normal: #hex ~or~ var();
+	--code-comment: #hex ~or~ var();
+	--code-function: #hex ~or~ var();
+	--code-keyword: #hex ~or~ var();
+	--code-string: #hex ~or~ var();
+	--code-number: #hex ~or~ var();
+
+    /* Icons */
+    --icon-color-normal: #hex ~or~ var();
+	--icon-color-hover: #hex ~or~ var();
+	--icon-color: #hex ~or~ var();
+	--search-icon-color: #hex ~or~ var();
+
+    /* Nav Items */
+    --nav-item-color: #hex ~or~ var();
+	--nav-item-color-hover: #hex ~or~ var();
+	--nav-item-color-active: #hex ~or~ var();
+	--nav-item-background-hover: #hex ~or~ var();
+	--nav-item-background-active: #hex ~or~ var();
+
+    /* Titlebar */
+    --titlebar-background-color: #hex ~or~ var();
+	--titlebar-color: #hex ~or~ var();
+
+    /* Blockquotes */
+    --blockquote-border-color: #hex ~or~ var();
+
+    /* Callouts */
+    --callout-color: #hex ~or~ var();
+	--callout-background: #hex ~or~ var();
+
+    /* Status Bar */
+    --status-bar-background: #hex ~or~ var();
+	--status-bar-item: #hex ~or~ var();
+	--status-bar-item-hover: #hex ~or~ var();
+
+    /* Graphs */
+    --graph-line: #hex ~or~ var();
+	--graph-node: #hex ~or~ var();
+	--graph-node-tag: #hex ~or~ var();
+	--graph-node-focused: #hex ~or~ var();
+	--graph-node-attachment: #hex ~or~ var();
+	--graph-node-unresolved: #hex ~or~ var();
+
+    /* Tables */
+    --table-border-color: #hex ~or~ var();
+    --table-header-background: #hex ~or~ var();
+    --table-row-even-background: #hex ~or~ var();
+    --table-row-odd-background: #hex ~or~ var();
+    --table-row-hover-background: #hex ~or~ var();
+
+    /* Lists */
+    --list-marker-color: #hex ~or~ var();
+    --list-indent: 2em;
+    --list-spacing: 0.5em;
+
+    /* Horizontal Rules */
+    --hr-color: #hex ~or~ var();
+    --hr-thickness: 1px;
+    --hr-style: solid;
+
+    /* Sidebars and Ribbons */
+    --ribbon-background: #hex ~or~ var();
+    --ribbon-background-collapsed: #hex ~or~ var();
+    --sidebar-background: #hex ~or~ var();
+    --sidebar-border-color: #hex ~or~ var();
+
+    /* Models and Popovers */
+    --modal-background: #hex ~or~ var();
+    --modal-border-color: #hex ~or~ var();
+    --popover-background: #hex ~or~ var();
+    --popover-border-color: #hex ~or~ var();
+
+    /* Search Results */
+    --search-result-background: #hex ~or~ var();
+    --search-result-background-active: #hex ~or~ var();
+    --search-result-border: #hex ~or~ var();
+    --suggestion-background: #hex ~or~ var();
+    --suggestion-background-active: #hex ~or~ var();
+
+    /* Core Plugins */
+
+    /* Kanban */
+    --kanban-lane-background: #hex ~or~ var();
+    --kanban-card-background: #hex ~or~ var();
+    --kanban-card-border: #hex ~or~ var();
+
+/* Dataview */
+    --dataview-table-border: #hex ~or~ var();
+    --dataview-header-background: #hex ~or~ var();
+
+/* Calendar */
+    --calendar-day-background: #hex ~or~ var();
+    --calendar-day-active: #hex ~or~ var();
+    --calendar-day-today: #hex ~or~ var();
+
+}
+
+.theme-dark {
+
+    /* Palettes */
+    --color001-dark: #hex;
+	--color002-dark: #hex;
+	--color003-dark: #hex;
+	--color004-dark: #hex;
+	--color005-dark: #hex;
+    --color006-dark: #hex;
+	--color007-dark: #hex;
+
+    /* Backgrounds */
+    --background-primary: #hex ~or~ var(); /*Note background*/
+	--background-primary-alt: #hex ~or~ var(); /*Note Title background active*/
+	--background-secondary: #hex ~or~ var(); /*Sidebar background*/
+	--background-secondary-alt: #hex ~or~ var(); /*Sidebar Title background*/
+
+    /* Modifiers */
+    --background-modifier-border: #hex ~or~ var(); /*Border outline of quotes, tables, line breaks*/
+	--background-modifier-form-field: #hex ~or~ var();
+	--background-modifier-form-field-highlighted: #hex ~or~ var();
+	--background-modifier-hover: #hex ~or~ var();
+	--background-modifier-border-hover: #hex ~or~ var();
+	--background-modifier-border-focus: #hex ~or~ var();
+	--background-modifier-cover: #hex ~or~ var(); /*Obsidian Title Bar Bg*/
+
+    /* Text */
+    --text-normal: #hex ~or~ var(); /*Text body of note*/
+	--text-muted: #hex ~or~ var(); /*Text darker for sidebar, toggles, inactive, tags, etc*/
+	--text-faint: #hex ~or~ var(); /*Link brackets color & Gutter Numbers*/
+	--text-accent: #hex ~or~ var(); /*Links*/
+	--text-on-accent: #hex ~or~ var();
+	--text-accent-hover: #hex ~or~ var(); /*Links hover*/
+	--text-on-accent-hover: #hex ~or~ var();
+	--text-selection: #hex ~or~ var(); /*Text Selections*/
+
+    /* Dropdowns */
+    --dropdown-background: #hex ~or~ var();
+
+    /* Interactives */
+    --interactive-normal: #hex ~or~ var(); /*Button Color*/
+    --interactive-hover: #hex ~or~ var(); /*Button Hovered Color*/
+    --interactive-accent: #hex ~or~ var(); /*Workspace Note Title Underline*/
+    --interactive-accent-hover: #hex ~or~ var(); /*Menu Button Hover*/
+
+    /* Tags */
+    --tag-background: #hex ~or~ var();
+	--tag-color: #hex ~or~ var();
+	--tag-background-hover: #hex ~or~ var();
+	--tag-color-hover: #hex ~or~ var();
+	--tag-border-color: #hex ~or~ var();
+
+    /* Metadata */
+    --metadata-label-text-color: #hex ~or~ var();
+	--metadata-label-background: #hex ~or~ var();
+	--metadata-property-background: #hex ~or~ var();
+
+    /* Buttons if separate from interactives */
+    --button-background: #hex ~or~ var();
+	--button-color: #hex ~or~ var();
+	--button-background-hover: #hex ~or~ var();
+	--button-color-hover: #hex ~or~ var();
+
+    /* Highlights */
+    --text-highlight-bg: #hex ~or~ var(); /*Search Matches*/
+    --text-highlight-bg-active: #hex ~or~ var(); /*Active Search Match (Preview Mode)*/
+
+    /* Links if separate from accent */
+    --link-color: #hex ~or~ var();
+	--link-color-hover: #hex ~or~ var();
+	--backlink-border-color: #hex ~or~ var();
+    --backlink-background: #hex ~or~ var();
+    --backlink-title-color: #hex ~or~ var();
+
+    /* Headings */
+    --h1-color: #hex ~or~ var();
+	--h2-color: #hex ~or~ var();
+	--h3-color: #hex ~or~ var();
+	--h4-color: #hex ~or~ var();
+	--h5-color: #hex ~or~ var();
+	--h6-color: #hex ~or~ var();
+
+    /* Checkboxes */
+    --checkbox-color: #hex ~or~ var();
+	--checkbox-color-hover: #hex ~or~ var();
+
+    /* Scrollbar */
+    --scrollbar-thumb-bg: #hex ~or~ var();
+	--scrollbar-active-thumb-bg: #hex ~or~ var();
+	--scrollbar-background: #hex ~or~ var();
+	--scrollbar-color: #hex ~or~ var();
+
+    /* Codeblocks */
+    --code-background: #hex ~or~ var();
+	--code-normal: #hex ~or~ var();
+	--code-comment: #hex ~or~ var();
+	--code-function: #hex ~or~ var();
+	--code-keyword: #hex ~or~ var();
+	--code-string: #hex ~or~ var();
+	--code-number: #hex ~or~ var();
+
+    /* Icons */
+    --icon-color-normal: #hex ~or~ var();
+	--icon-color-hover: #hex ~or~ var();
+	--icon-color: #hex ~or~ var();
+	--search-icon-color: #hex ~or~ var();
+
+    /* Nav Items */
+    --nav-item-color: #hex ~or~ var();
+	--nav-item-color-hover: #hex ~or~ var();
+	--nav-item-color-active: #hex ~or~ var();
+	--nav-item-background-hover: #hex ~or~ var();
+	--nav-item-background-active: #hex ~or~ var();
+
+    /* Titlebar */
+    --titlebar-background-color: #hex ~or~ var();
+	--titlebar-color: #hex ~or~ var();
+
+    /* Blockquotes */
+    --blockquote-border-color: #hex ~or~ var();
+
+    /* Callouts */
+    --callout-color: #hex ~or~ var();
+	--callout-background: #hex ~or~ var();
+
+    /* Status Bar */
+    --status-bar-background: #hex ~or~ var();
+	--status-bar-item: #hex ~or~ var();
+	--status-bar-item-hover: #hex ~or~ var();
+
+    /* Graphs */
+    --graph-line: #hex ~or~ var();
+	--graph-node: #hex ~or~ var();
+	--graph-node-tag: #hex ~or~ var();
+	--graph-node-focused: #hex ~or~ var();
+	--graph-node-attachment: #hex ~or~ var();
+	--graph-node-unresolved: #hex ~or~ var();
+
+    /* Tables */
+    --table-border-color: #hex ~or~ var();
+    --table-header-background: #hex ~or~ var();
+    --table-row-even-background: #hex ~or~ var();
+    --table-row-odd-background: #hex ~or~ var();
+    --table-row-hover-background: #hex ~or~ var();
+
+    /* Lists */
+    --list-marker-color: #hex ~or~ var();
+    --list-indent: 2em;
+    --list-spacing: 0.5em;
+
+    /* Horizontal Rules */
+    --hr-color: #hex ~or~ var();
+    --hr-thickness: 1px;
+    --hr-style: solid;
+
+    /* Sidebars and Ribbons */
+    --ribbon-background: #hex ~or~ var();
+    --ribbon-background-collapsed: #hex ~or~ var();
+    --sidebar-background: #hex ~or~ var();
+    --sidebar-border-color: #hex ~or~ var();
+
+    /* Models and Popovers */
+    --modal-background: #hex ~or~ var();
+    --modal-border-color: #hex ~or~ var();
+    --popover-background: #hex ~or~ var();
+    --popover-border-color: #hex ~or~ var();
+
+    /* Search Results */
+    --search-result-background: #hex ~or~ var();
+    --search-result-background-active: #hex ~or~ var();
+    --search-result-border: #hex ~or~ var();
+    --suggestion-background: #hex ~or~ var();
+    --suggestion-background-active: #hex ~or~ var();
+
+    /* Core Plugins */
+
+    /* Kanban */
+    --kanban-lane-background: #hex ~or~ var();
+    --kanban-card-background: #hex ~or~ var();
+    --kanban-card-border: #hex ~or~ var();
+
+/* Dataview */
+    --dataview-table-border: #hex ~or~ var();
+    --dataview-header-background: #hex ~or~ var();
+
+/* Calendar */
+    --calendar-day-background: #hex ~or~ var();
+    --calendar-day-active: #hex ~or~ var();
+    --calendar-day-today: #hex ~or~ var();
+}
+
+/*Box Sizing Reset - this makes it easier to set any ::before and ::after pseudo-elements' dimensions,
+since it includes any border and padding into the height and width values you set.
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}*/
+
+/*----Startup Progress Bar Screen----*/
+/*Startup Progress Bar Window*/
+.progress-bar {}
+
+/*Startup Text*/
+.progress-bar .progress-bar-message {}
+
+/*Startup Progress Bar Background*/
+.progress-bar-indicator .progress-bar-line {}
+
+/*Startup Progress Bar Moving Line*/
+.progress-bar-indicator .progress-bar-subline {}
+
+
+/*----Settings----*/
+/*All Popup Windows: Settings*/
+.modal {}
+
+/*Command Palette & Quick Switcher*/
+.prompt {}
+
+/*The notifications in the top right*/
+.notice {}
+
+/*Context Menu (Right CLick sth)*/
+.menu {}
+
+/*Setting Dropdown*/
+.dropdown {}
+
+/*Community Themes Browser*/
+.community-theme {}
+
+/*Community Plugins Browser*/
+.community-plugin {}
+
+
+/*--Extras--*/
+
+/*Tooltip Popup*/
+.tooltip {}
+
+
+
+/*----Workspace----*/
+/* ribbons, the thin vertical bars to the far left/right */
+.workspace-ribbon {}
+
+/*Side Panels*/
+.workspace-tabs {}
+
+/*Side Panel: Icons*/
+.workspace-tab-header-inner-icon {}
+
+
+
+
+/*--File Explorer--*/
+
+/*Nav Top: Create Note, Sort, Create Folder*/
+.nav-header {}
+
+/*Folder*/
+.nav-folder {}
+.nav-folder-title {}
+
+/*Files*/
+.nav-file {}
+.nav-file-title {}
+/* (also applies to many plugins displaying file lists in the side bar) */
+
+
+/*Status Bar*/
+.status-bar {}
+
+/*--Title Bar--*/
+
+/*Title Bar*/
+.titlebar {}
+
+/*Navigation Button - Back */
+.mod-back {}
+
+/*Navigation Button - Forward*/
+.mod-forward {}
+
+/*Window Control- Minimize*/
+.mod-minimize {}
+
+/*Window Control- Minimize*/
+.mod-maximize {}
+
+/*Window Control- Close*/
+.mod-close {}
+
+
+
+/*Buttons*/
+/*Default Buttons*/
+button {}
+/*Settings Buttons*/
+button.mod-cta {}
+/*Warning Buttons*/
+button.mod-warning{}
+
+
+
+/*--Workspace: Notes--*/
+/*Note Title Bar*/
+.workspace-leaf .view-header {}
+
+/*Inactive Note Titlebar*/
+/*Note Title Bar: Text*/
+.view-header-title {}
+
+/*Note Title Bar: Note Icon*/
+.view-header-icon {}
+
+/*Note Title Bar: Settings Icons*/
+.view-action {}
+
+/*Active Note Titlebar*/
+/*Note Title Bar: Text*/
+.workspace-leaf.mod-active .view-header-title {}
+
+/*Note Title Bar: Note Icon*/
+.workspace-leaf.mod-active .view-header-icon {}
+
+/*Note Title Bar: Settings Icons*/
+.workspace-leaf.mod-active .view-action {}
+
+
+
+
+
+
+
+/*----Notes----*/
+.cm-s-obsidian:not(.is-live-preview) {} /*Source Mode*/
+.markdown-source-view {} /*Source Mode*/
+
+.cm-s-obsidian.is-live-preview {} /*Live Preview Mode*/
+
+.markdown-preview-view {} /*Reading Mode*/
+
+/*--Emphasis--*/
+
+/*Bold*/
+strong {} /*Reading View*/
+.cm-s-obsidian .cm-strong {} /*Editing View*/
+
+/*Italic/Emphasis*/
+em {} /*Reading View*/
+.cm-em {} /*Editing View*/
+
+/*Highlight*/
+.markdown-preview-view mark {} /*Reading View*/
+.cm-s-obsidian .cm-highlight {} /*Editing View*/
+.cm-s-obsidian .cm-formatting-highlight {} /*Editing View highlight symbols/syntax*/
+
+/*Strikethrough*/
+.cm-strikethrough {} /*Editing View*/
+del {} /*Reading View*/
+
+/*--Headers/Headings--*/
+h1 {} /*Reading Mode*/
+h2 {} /*Reading Mode*/
+h3 {} /*Reading Mode*/
+h4 {} /*Reading Mode*/
+h5 {} /*Reading Mode*/
+h6 {} /*Reading Mode*/
+.cm-header-1 {} /*Source Mode*/
+.cm-header-2 {} /*Source Mode*/
+.cm-header-3 {} /*Source Mode*/
+.cm-header-4 {} /*Source Mode*/
+.cm-header-5 {} /*Source Mode*/
+.cm-header-6 {} /*Source Mode*/
+
+.cm-header {} /* applies to all source mode headings */
+
+
+
+/*--Horizontal Line--*/
+hr {} /*Reading Mode*/
+.hr.cm-line {} /*Source Mode*/
+.HyperMD-hr-bg {} /*Source Mode*/
+
+/*HR Line Text*/
+.cm-s-obsidian pre.HyperMD-hr {} /*Source Mode*/
+
+
+
+
+/*--Comments--*/
+/* html comments and obsidian style comments */
+.cm-comment {}
+
+
+
+
+/*--Code--*/
+code {}
+
+/*Inline Code*/
+.cm-s-obsidian span.cm-inline-code {} /*Source Mode*/
+.markdown-preview-view code {} /*Reading Mode*/
+
+/*Codeblock (no language specified) */
+.markdown-preview-view pre {} /*Reading Mode*/
+.cm-s-obsidian pre.HyperMD-codeblock {} /*Source Mode*/
+
+/*Codeblock: Language Specified: ```js*/
+.markdown-preview-view pre[class*=language-] {} /*Reading Mode*/
+.markdown-preview-view code[class*=language-] {} /*Reading Mode*/
+
+
+
+
+/*--Links--*/
+.cm-s-obsidian span.cm-hmd-internal-link {} /*Source Mode*/
+
+/*Wiki Links*/
+a.internal-link {} /*Reading Mode*/
+
+/*Markdown Links*/
+a.external-link {} /*Reading Mode*/
+
+/*Link to No Page*/
+a.internal-link.is-unresolved {} /*Reading Mode*/
+
+
+
+
+/*--Lists--*/
+.cm-s-obsidian .HyperMD-list-line {} /*Source Mode*/
+
+/*List Bullet/Number/Formatting*/
+li::marker {} /*Reading Mode*/
+span.cm-formatting-list-ul {} /*Source Mode*/
+span.cm-formatting-list-ol {} /*Source Mode*/
+
+/*Bullet Lists*/
+ul {} /*Reading Mode*/
+
+/*Bullet List Text*/
+ul li {} /*Reading Mode*/
+
+/*Bullet List Symbol*/
+ul li::marker {} /*Reading Mode*/
+
+/*Numbered Lists*/
+ol {} /*Reading Mode*/
+
+/*Numbered List Text*/
+ol li {} /*Reading Mode*/
+
+/*Numbered List Number*/
+ol li::marker {} /*Reading Mode*/
+
+/*Checkbox List*/
+li.task-list-item {} /*Reading Mode*/
+input[type=checkbox i] {} /*Reading Mode*/
+
+/*Checked Checkbox*/
+.markdown-preview-view .task-list-item-checkbox:checked {} /*Reading Mode*/
+input[type=checkbox]:checked {} /*Reading Mode*/
+
+
+
+
+
+/*--Blockquotes--*/
+.markdown-preview-view blockquote {}
+
+
+
+
+
+/*--Tables--*/
+table {} /*Reading Mode*/
+
+/*Table Headers*/
+table th {} /*Reading Mode*/
+
+/*Table Column*/
+table td {} /*Reading Mode*/
+
+/*Table Row*/
+table tr {} /*Reading Mode*/
+.cm-s-obsidian .HyperMD-table-row {} /*Source Mode*/
+
+
+
+
+/*--Tags--*/
+a.tag {} /*Reading Mode*/
+.cm-s-obsidian span.cm-hashtag {} /*Source Mode*/
+
+
+
+
+
+/*--Frontmatter/Metadata/Yaml--*/
+.frontmatter-container {} /*Reading Mode*/
+.CodeMirror-line .cm-s-obsidian .cm-hmd-frontmatter {} /*Source Mode*/
+
+/*Frontmatter Tag*/
+.frontmatter-container .frontmatter-alias {} /*Reading Mode*/
+
+
+
+
+
+/*--Embeds--*/
+.markdown-preview-view .markdown-embed {} /*Reading Mode*/
+.internal-embed.is-loaded:not(.image-embed) {} /*Reading Mode*/
+
+.markdown-source-view.mod-cm6 .cm-embed-block {} /*Live Preview Mode*/
+.markdown-source-view .markdown-embed:not(.mod-empty) {} /*Live Preview Mode*/
+
+/*File Embed*/
+.markdown-preview-view .file-embed {} /*Reading Mode*/
+.markdown-source-view .file-embed:not(.mod-empty) {} /*Live Preview Mode*/
+
+/*Empty/No Embed Found*/
+.markdown-source-view .markdown-embed.mod-empty {} /*Live Preview Mode*/
+.markdown-source-view .file-embed.mod-empty {} /*Live Preview Mode*/
+
+/*Embed Titles*/
+.markdown-embed-title {} /*Reading Mode*/
+.file-embed-title {} /*Reading Mode*/
+
+/*Embed Link*/
+.markdown-embed-link {}
+.file-embed-link {}
+
+
+/*--Footnotes--*/
+
+/*Footnote link in note*/
+.markdown-preview-view a.footnote-link {} /*Reading View*/
+
+/*Reference Number in text*/
+.cm-s-obsidian span.cm-footref {} /*Editing View*/
+
+/*Footnotes section at the bottom of the note*/
+.markdown-preview-view .footnotes {} /*Reading View*/
+
+/*Footnote back ref (arrow) at the bottom of the note*/
+.footnote-backref {} /*Reading View*/
+
+
+/*--Graph--*/
+
+.graph-view.color-fill {
+	color: var(--text-muted); /*color of nodes*/
+}
+.graph-view.color-fill-focused { /*color of focused node/note*/
+	color: #ffdd00;
+}
+.theme-dark .graph-view.color-fill-tag { /*dark mode tag color*/
+	color: #704214;
+}
+.theme-light .graph-view.color-fill-tag { /*light mode tag color*/
+	color: #E0D3AF;
+}
+.theme-dark .graph-view.color-fill-attachment { /*dark mode attachment color*/
+	color: #1a356b;
+}
+.theme-light .graph-view.color-fill-attachment { /*light mode attachment color*/
+	color: #83D4F4;
+}
+.graph-view.color-fill-unresolved { /*unresolved(not created yet) notes*/
+	color: var(--text-muted);
+	opacity: 0.4;
+}
+.graph-view.color-arrow { /*arrow color*/
+	color: var(--text-normal);
+	opacity: 0.5;
+}
+.graph-view.color-circle { /*focused node border color*/
+	color: var(--text-normal);
+}
+.graph-view.color-line { /*link color*/
+	color: var(--background-modifier-border);
+}
+.graph-view.color-text { /*text color*/
+	color: var(--text-normal);
+}
+.graph-view.color-fill-highlight { /*focused node color*/
+	color: var(--interactive-accent);
+}
+.graph-view.color-line-highlight { /*focused node connections*/
+	color: var(--interactive-accent);
+}
+
+.graph-controls {} /*Graph Menu*/
+
+/* Cursor */
+.cm-cursorLayer .cm-cursor {
+	/* border-left: ... */
+}
+
+/* animation of the blinking */
+.cm-cursorLayer {
+	/* deactivate built-in animation from CodeMirror */
+	animation-name: none !important; /* important needed */
+}
+
+@keyframes phase-blink {
+	15% { opacity: 1 }
+	50% { opacity: 0 }
+	85% { opacity: 1 }
+}
+
+.cm-cursorLayer .cm-cursor {
+	animation-duration: 2200ms;
+	animation-name: phase-blink;
+}
